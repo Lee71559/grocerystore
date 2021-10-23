@@ -1,1 +1,2 @@
-# fa21-172-wing-chun
+# Team Project (Replace with your Team Name and Journal)
+
