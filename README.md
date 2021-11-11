@@ -1,5 +1,10 @@
 # Team Project: Wing Chun
 ### Project Name: SJSU Grocery Store
+>Team Members
+> * Veida Hernandez
+> * Shan Shan Lee
+> * Roneil Sembrano
+> * Xuefeng Xu
 ### Individual Journal:
 * [Veida's Journal](https://docs.google.com/document/d/1X35h_aSItfaM1jGB9sPa-LV7i5DSesHc16box4UsePI/edit?usp=sharing)
 ## Team Journal:
@@ -12,4 +17,11 @@
 * Work split reassigned 
 * Task created and assigned
 * React application created 
-* 
+## Journal Entry 3 (11/11/21):
+* Meet to disscuse team progress.
+* Ro working on spring-boot portion
+* Shan has completed assignment and is working on react portion
+* Veida has completed assignment and is working on react portion
+* Xuefeng has completed assignment
+* Scheduled next meeting for Sunday, will be working on deployment
+
