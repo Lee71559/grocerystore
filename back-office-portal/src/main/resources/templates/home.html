@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+    <head>
+        <title>Back Office Portal</title>
+    </head>
+    <body>
+        <h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
+
+
+
+        <form name="form" th:object="${command}" method="post" action="">
+        <p>
+            Search by order Id: <input type="text" id="orderid" placeholder="/all" th:field="*{orderid}"/>
+            <input type="submit" name="action" id="searchorders" value="Search Orders" class="btn">
+        </p>
+        
+        <p>
+            Search by customer name: <input type="text" id="customername" placeholder="/all" th:field="*{customername}"/>
+            <input type="submit" name="action" id="searchorders" value="Search customer">
+        </p>
+        </form>
+
+
+        <form th:action="@{/logout}" method="post">
+            <input type="submit" value="Sign Out"/>
+        </form>
+    </body>
+</html>
