@@ -24,4 +24,12 @@
 * Veida has completed assignment and is working on react portion
 * Xuefeng has completed assignment
 * Scheduled next meeting for Sunday, will be working on deployment
-
+## Journal Entry 4 (11/14/21)
+* Late meeting Sunday night.
+* Discussed flow of our project.
+* Made sure we all understood how our project willl flow.
+* Ro login/ register will happen first, Shan catalog , Veidas payment, and Xuefeng will back office portals.
+* Database will be implemented by Xuefeng on google cloud
+* Everyone is still working on their tasks.
+* Flow Chart ![alt text]()
+## Journal Entry 5 (11/18/21)
