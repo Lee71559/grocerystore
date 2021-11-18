@@ -1,12 +1,24 @@
-import axios from "axios";
+import axios from 'axios';
 
-const EMPLOYEE_API_BASE_URL = "http://localhost:8080/checkout";
+const EMPLOYEE_API_BASE_URL = "http://localhost:8080/checkout/";
+const API_BASE_URL = "http://localhost:8080/checkout/";
+
 
 class CheckoutService{
-    postAction(command)
+    
+    
+    getPayments(){
+        return axios.get(EMPLOYEE_API_BASE_URL +'/payments');
+    }
+    
+
+
+    checkOut(command)
     {
-        return axios.post(EMPLOYEE_API_BASE_URL, command);
+
+        return axios.post(API_BASE_URL +'/payments', command);
     }
 }
 
-export default CheckoutService
+
+export default new CheckoutService()
