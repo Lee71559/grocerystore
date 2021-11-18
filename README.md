@@ -6,7 +6,7 @@
 > * Roneil Sembrano
 > * Xuefeng Xu
 ### Individual Journal:
-* [Veida's Journal](https://docs.google.com/document/d/1X35h_aSItfaM1jGB9sPa-LV7i5DSesHc16box4UsePI/edit?usp=sharing)
+* [Veida's Journal](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/app-cmpe172/README.md)
 ## Team Journal:
 ## Journal Entry 1 (10/28/21):
 * Meeting to decide what application to make. 
@@ -33,3 +33,9 @@
 * Everyone is still working on their tasks.
 * Flow Chart ![alt text]()
 ## Journal Entry 5 (11/18/21)
+* Meet to discuss progress. Shan is re working the database inorder to connect order id to an entire order.
+* Ro is working on his login/logout in spring
+* Xuefeng has updated the flow chart and provided new charts.
+* Veida has resolved her issue with react and is moving on to deployment.
+* Flow Chart Update ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/images2.png)
+* Other Charts ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/images3.png)
