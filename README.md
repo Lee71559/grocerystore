@@ -31,7 +31,7 @@
 * Ro login/ register will happen first, Shan catalog , Veidas payment, and Xuefeng will back office portals.
 * Database will be implemented by Xuefeng on google cloud
 * Everyone is still working on their tasks.
-* Flow Chart ![alt text]()
+* Flow Chart ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/images1.png)
 ## Journal Entry 5 (11/18/21)
 * Meet to discuss progress. Shan is re working the database inorder to connect order id to an entire order.
 * Ro is working on his login/logout in spring
