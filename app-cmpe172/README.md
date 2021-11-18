@@ -1,6 +1,16 @@
+# Veida’s Journal:
+## Entry 1(10/28/2021):
+First Team Meeting. Outline of the project was created. Project subject was determined. We will be making a Grocery store application. Assignments were made. I am incharge of setting up react. Task will be completed by 11/7.
+## Entry 2 (11/4/2021):
+Second Team Meeting. Assignments reassigned. Task system was designed to map out the micro services. I will implement the payment microservice. Theme was decided SJSU colors. 
+## Entry 3 (11/11/21):
+The third meeting updated the team on my progress. Payment service is done. Testing the connection with the react forms. Frontend styling and creation are done.
+## Entry 4 (11/14/21):
+Meet with the team to discuss the flow of our project. I updated them on the issue by connecting the form with react. Getting a POST http://localhost:8080/checkout/payments 400 error. Postman connection works fine and I am able to display information from SQL on react page.
+## Entry 5 (11/18/21)
+Meet to discuss progress. Discussed that my issue was corrected. I am now able to save to my database and check for authorization using react frontend. Will be implementing a few styling changes and updating errors. Next step will be deploying it onto Google cloud.
+---
 # Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
