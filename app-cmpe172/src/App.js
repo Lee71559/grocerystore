@@ -6,6 +6,8 @@ import HeaderComponent from './components/HeaderComponent';
 import HomeComponent from './components/HomeComponent';
 import FooterComponent from './components/FooterComponent';
 import CheckoutComponent from './components/CheckoutComponent';
+import ListPaymentsComponent from './components/ListPaymentsComponent';
+import ConfirmationComponent from './components/ConfirmationComponent';
 
 function App() {
   return (
@@ -15,7 +17,9 @@ function App() {
      <div>
      <Routes>
        <Route path = "/" element={<HomeComponent/>}/>
+       <Route path="/payments" element={<ListPaymentsComponent/>}/>
        <Route path = "/checkout" element={<CheckoutComponent/>}/>
+       <Route path="/status" element={<ConfirmationComponent/>}/>
      </Routes>
      </div>
      <FooterComponent />
