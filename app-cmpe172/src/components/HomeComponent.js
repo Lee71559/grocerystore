@@ -6,6 +6,11 @@ import Container from '@mui/material/Container';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import { Typography } from "@material-ui/core";
+import Card from '@mui/material/Card';
+import CardHeader from '@mui/material/CardHeader';
+import CardMedia from '@mui/material/CardMedia';
+import CardContent from '@mui/material/CardContent';
+import CardActions from '@mui/material/CardActions';
 
 import {
   Toolbar,
@@ -43,10 +48,42 @@ class HomeComponent extends Component {
                  <Grid>
                      <Box m={20} maxHeight ={20}>
                          <Typography variant="h2" align="center">
-                             Welcome
+                             Welcome to SJSU Store!
                          </Typography>
+                         <Card>
+                            <CardMedia
+                            component="img"
+                            alt="SJSU"
+                            image="/images/image1.jpg"
+                            title="SJSU"
+                            />
+                         </Card>
                      </Box>
                  </Grid>
+                 <br/>
+                 <br/>
+                 <br/>
+                 <br/>
+                 <br/>
+                 <br/>
+                 <br/>
+                 <br/>
+                 <br/>
+                 <br/>
+                 <br/>
+                 <br/>
+                 <br/>
+                 <br/>
+                 <br/>
+                 <br/>
+                 <br/>
+                 <br/>
+                 <br/>
+                 <br/>
+                 <br/>
+                 <br/>
+                 <br/>
+
             </div>
         )
     }

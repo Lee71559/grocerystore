@@ -140,10 +140,25 @@ public class PaymentsController {
 
     @PostMapping("/payments")
     public PaymentsCommand checkOut(@RequestBody PaymentsCommand command)
-{
+{       
+        /*
+        error;
+    public boolean errorRequired;
+    public boolean errorInvalid;
+    public boolean errorUSCCT;
+    public boolean errorAuthorized;
+    public boolean errorCR;
+    public String errormsg;
+        */
         command.setError(false);
+        command.setErrorRequired(false);
+        command.setErrorInvalid(false);
+        command.setErrorUSCCT(false);
+        command.setErrorAuthorized(false);
+        command.setErrorCR(false);
+
         //log.info( "Action: " + action ) ;
-        log.info( "Command: " + command ) ;
+        //log.info( "Command: " + command ) ;
         
         CyberSourceAPI.setHost(apiHost);
         CyberSourceAPI.setKey(merchantKeyId);
@@ -168,6 +183,17 @@ public class PaymentsController {
         if(command.cardcvv().equals(""))  { hasErrors = true ; msgs.add("Credit Card CVV Required.");}
         if(command.email().equals(""))  { hasErrors = true ; msgs.add("Email Address Required.");}
 
+        if (hasErrors)
+        {
+            //
+            //msgs.print();
+            //model.addAttribute( "messages", msgs.getMessages());
+            command.setErrorRequired(true);
+            command.setErrorMsg("Fill in Required* Field(s)!");
+            //comman.setErrorMsg("Field Required")
+            return command;
+        }
+
         if ( !command.zip().matches("\\d{5}"))  { hasErrors = true ; msgs.add("Invalid Zip");}
         if ( !command.phone().matches("[(]\\d{3}[)] \\d{3}-\\d{4}")) { hasErrors = true ; msgs.add("Invalid Phone.");}
         if ( !command.cardnum().matches("\\d{4}-\\d{4}-\\d{4}-\\d{4}")) { hasErrors = true ; msgs.add("Invalid Card Number.");}
@@ -182,7 +208,8 @@ public class PaymentsController {
         {
             //msgs.print();
             //model.addAttribute( "messages", msgs.getMessages());
-            command.setError(true);
+            command.setErrorMsg("Invalid Field Entered!");
+            command.setErrorInvalid(true);
             return command;
         }
 
@@ -211,7 +238,8 @@ public class PaymentsController {
         {
             System.out.println("Unsupported Credit Card Type.");
             //model.addAttribute("message","Unsupported Credit Card Type.");
-            command.setError(true);
+            command.setErrorMsg("Unsupported Credit Card Type.");
+            command.setErrorUSCCT(true);
             return command;
             //return "creditcards";
         }
@@ -228,7 +256,8 @@ public class PaymentsController {
             System.out.println(authResponse.message);
            // model.addAttribute( "message", authResponse.message);
            // return "creditcards";
-            command.setError(true);
+            command.setErrorMsg(authResponse.message);
+            command.setErrorAuthorized(true);
             return command;
         }
 
@@ -251,7 +280,8 @@ public class PaymentsController {
                 System.out.println(captureResponse.message);
                 //model.addAttribute("message", captureResponse.message);
                 //return "creditcards";
-                 command.setError(true);
+                command.setErrorMsg(captureResponse.message);
+                 command.setErrorCR(true);
                  return command;
             }
         }
@@ -268,6 +298,7 @@ public class PaymentsController {
             command.setCaptureId(captureResponse.id);
             command.setCaptureStatus(captureResponse.status);
             
+            command.setErrorMsg("Processing...");
             return paymentsRepository.save(command);
 
         //System.out.println("Thank You for your Payment! Your Order Number is: " + order_num);
@@ -294,7 +325,7 @@ public class PaymentsController {
 
        
 
-
+        command.setErrorMsg("ERROR!");
         command.setError(true);
         return command;
     }
