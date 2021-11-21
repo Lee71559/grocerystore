@@ -19,6 +19,8 @@ import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import { Typography } from "@material-ui/core";
+import { Link } from 'react-router-dom';
+
 
 
 
@@ -30,8 +32,9 @@ function data(amount,name,price)
 
 const rows = [
 data('1','Milk','$7.00'),
-data('1','Eggs','$4.00'),
-data('2','Soda','$2.00')
+data('2','Eggs','$4.00'),
+data('3','Soda','$2.00'),
+data('1','Bacon','$9.00')
 ];
 
 var fnemptyError = false;
@@ -52,6 +55,7 @@ var Error = false;
 
 
 class CheckoutComponent extends PureComponent {
+    
     constructor(props) {
         super(props)
         this.state = {
@@ -68,8 +72,9 @@ class CheckoutComponent extends PureComponent {
             cardexpyear:'',
             cardcvv:'',
             email:'',
-            notes:''
+            notes:'',
 
+            errorMsg:''
 
         }
 
@@ -117,18 +122,24 @@ class CheckoutComponent extends PureComponent {
         
         CheckoutService.checkOut(command)
         .then(res => {
+
             //console.log(res);
             if(res.data.error == true)
             {
                 Error = true;
             }
-            console.log(res.data.error);
-        
+            console.log(res.data.errorMsg);
+            this.setState({errorMsg: res.data.errorMsg});
+            if(res.data.errorMsg == "None")
+            {
+                return <div><Link to="/status"> <Typography aligned="center"><Button component={Link} to="/status" variant="contained" color="success" onClick={this.saveCC} >Process Payment</Button></Typography> </Link></div>
+
+            }
 
         });
+
     }
 
-    
   
     changeFirstNameHandler= (event) => {
        fnemptyError = false;
@@ -297,10 +308,13 @@ class CheckoutComponent extends PureComponent {
         this.setState({notes: event.target.value});
 
     }
-
+    
 
     render() {
+
+
         const check =()=> {
+
 
             if(Error)
             {
@@ -321,7 +335,13 @@ class CheckoutComponent extends PureComponent {
             </div>
         }
         else{
-            return <div><Typography aligned="center"><Button href="/status" variant="contained" color="success" onClick={this.saveCC} >Process Payment</Button></Typography></div>
+            if(this.state.errorMsg == "None")
+            {
+                return <div><Typography aligned="center"><Button component={Link} to="/status" variant="contained" color="success" onClick={this.saveCC} >Process Payment</Button></Typography></div>
+
+            }
+            return <div><Typography aligned="center"><Button  variant="contained" color="error" onClick={this.saveCC} >Process Payment</Button></Typography></div>
+
         }
     }
         return (
@@ -367,7 +387,7 @@ class CheckoutComponent extends PureComponent {
                             </TableBody>
                             <TableBody> 
                                 
-                                <TableCell colSpan={2} align='right'> Total: $13.00 </TableCell>
+                                <TableCell colSpan={2} align='right'> Total: $30.00 </TableCell>
                             </TableBody>
                         </Table>
                     </TableContainer>
@@ -555,11 +575,23 @@ class CheckoutComponent extends PureComponent {
                 </Grid>
                 <Grid xs={8}> 
                      <Box m={10}>
-                    <Typography align="center"> {check()} </Typography>
+                    <Typography align="center"> 
+                    <Typography  align="center" color="error">
+                    {
+                         this.state.errorMsg
+                        }
+                    </Typography>
+                    
+                     <br/>
+                    {check()}
+                    <br/>
+                    <Button component={Link} to="/" color="error" variant="contained">Cancel</Button>
+                   
+                     </Typography>
+
                     </Box>
                      </Grid>
-                     <div><Typography aligned="center"><Button href="/status" variant="contained" color="success" >Process Payment</Button></Typography></div>
-
+                    
             </div>
 
 
@@ -568,3 +600,6 @@ class CheckoutComponent extends PureComponent {
 }
 
 export default CheckoutComponent
+
+//Code Save:
+//<div><Typography aligned="center"><Button href="/status" variant="contained" color="success" >Process Payment</Button></Typography></div>

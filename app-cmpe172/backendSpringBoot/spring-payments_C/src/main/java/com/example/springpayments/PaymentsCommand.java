@@ -51,7 +51,14 @@ public class PaymentsCommand {
     private String captureId;
     private String captureStatus;
 
+    //Catch Errors
     public boolean error;
+    public boolean errorRequired;
+    public boolean errorInvalid;
+    public boolean errorUSCCT;
+    public boolean errorAuthorized;
+    public boolean errorCR;
+    public String errorMsg;
 
 
 
