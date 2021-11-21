@@ -7,6 +7,7 @@
 > * Xuefeng Xu
 ### Individual Journal:
 * [Veida's Journal](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/app-cmpe172/README.md)
+* [Shan Shan's Journal](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/catalog-cart/README.md)
 ## Team Journal:
 ## Journal Entry 1 (10/28/21):
 * Meeting to decide what application to make. 

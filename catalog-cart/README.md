@@ -1,3 +1,33 @@
+# Shan Shan Lee Journal - Items Catalog and Shopping Cart
+
+## Journal 1 (10/28/21):
+* Distributed tasks with team members, tasks are separated by frontend, backend, database, and office portal.
+* Discussed the outline of the app including database schema, technologies used, and wepages to be designed. 
+* Assigned to design database schema. 
+
+## Journal 2 (10/28/21):
+* Suggested to redistribute tasks, tasks are separated by functions including login/signup, catalog/cart, payment, backend office portal.
+* Assigned to be responsible for items catalog and shopping cart.
+* Started to create table, REST API for items, orders, and shopping cart.
+
+## Journal 3 (11/11/21):
+* Half-way done the backend for items catalog and shopping cart.
+* Updated my progress with team members.
+
+## Journal 4 (11/14/21)
+* Discussed wbout every team members progress.
+* Reported that no progress from me as it was midterm week.
+
+## Journal 5 (11/18/21)
+* Discussed with team members with the issue I was facing when debugging the REST API of shopping cart.
+* Issue: Redundant orders made when customer adding different items into order table.
+* Solution: Created another table to hold items for each order.
+* Started implementing React for frontend.
+
+## Journal 6 (11/20/21)
+* Discussed with XueFeng about the updated table for order so that the issue is solved.
+* Implemented React for frontend and continued working on it to make sure there is no bug.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
