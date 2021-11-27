@@ -131,7 +131,7 @@ class OrderController {
 
   // To add item to cart, userId is passed in as variable, item info is passed in as body
   @PostMapping("/ordersItem/{id}")
-  public Order_item addToCart(@RequestBody Order_item orderItem, @PathVariable Long id){
+  public String addToCart(@RequestBody Order_item orderItem, @PathVariable Long id){
     /*
     Order userOrder = new Order();
     userOrder.setUserId(id);
@@ -259,7 +259,7 @@ class OrderController {
     */
     updateOrderTotal(userOrder);
 
-    return newOrderItem;
+    return "Item added to cart";
   }
 
   // Get all item ordered by a customer

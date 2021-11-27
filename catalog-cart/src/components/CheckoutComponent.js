@@ -1,6 +1,5 @@
 import React, { PureComponent, useState } from 'react'
 import CartService, {viewCart} from '../services/CartService.js'
-import CatalogService, {getItems} from '../services/CatalogService.js'
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Table from '@material-ui/core/Table';

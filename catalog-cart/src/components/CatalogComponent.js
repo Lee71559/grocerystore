@@ -1,27 +1,26 @@
-import React, { Component } from "react";
-import MenuIcon from "@material-ui/icons/Menu";
+import React, { PureComponent, useState } from 'react'
 import "../components/HeaderComponent.css"
-import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
-import Paper from '@mui/material/Paper';
-import Grid from '@mui/material/Grid';
 import { Typography } from "@material-ui/core";
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
 import CardMedia from '@mui/material/CardMedia';
 import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
-import {
-  Toolbar,
-  AppBar,
-  IconButton,
-  Menu,
-  MenuItem,
-  Divider,
-} from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
-
+import { styled } from '@mui/material/styles';
+import Box from '@mui/material/Box';
+import Paper from '@mui/material/Paper';
+import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
+import IconButton from '@mui/material/IconButton';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+
+import CatalogService, {getItems} from '../services/CatalogService.js'
+import CartService, {viewCart} from '../services/CartService.js'
+
+var userId = 11;
+var orderId = 13;
 
 const Bstyle = {
     color: "black",
@@ -31,35 +30,81 @@ const Bstyle = {
         primary: '#88CAFB'
     },
   }));
-class CatalogComponent extends Component {
 
-    constructor(props)
-    {
+class CatalogComponent extends PureComponent {
+
+    constructor(props) {
         super(props)
-        this.state={
 
+        this.state = {
+            items: []
         }
+        
+    }
+
+    componentDidMount(){
+        CatalogService.getItems().then((res) => {
+            this.setState({ items: res.data});
+        });
+    }
+
+    addToCart(itemId){
+
+        let command = {
+            itemId: itemId,
+            quantity: 1
+        }
+
+        CartService.addToCart(userId, command).then((res) => {
+            window.alert(res.data);
+        });
     }
 
     render(){
         return(
+            
             <div>
-                 <Grid>
-                     <Box m={20} maxHeight ={20}>
-                         <Typography variant="h2" align="center">
-                             Welcome to SJSU Store!
-                         </Typography>
-                         <Card>
-                            <CardMedia
-                            component="img"
-                            alt="SJSU"
-                            image="/images/image1.jpg"
-                            title="SJSU"
-                            />
-                         </Card>
-                     </Box>
-                 </Grid>
-
+                <Box m={20} maxHeight ={20}>
+                    <div>
+                        <Typography variant="h2" align="center">
+                            Catalog
+                        </Typography>
+                        <br/>
+                    </div>
+                    
+                    <div>
+                        <Grid container spacing={4}>
+                            {
+                                this.state.items.map(
+                                    item => 
+                                    <Grid item xs={4}>
+                                        <Card sx={{ flex: '1 0 auto' }} variant="outlined">
+                                            {/*<CardMedia
+                                                component="img"
+                                                alt="green iguana"
+                                                height="300"
+                                                image="/images/image1.jpg"
+                                            />*/}
+                                            <CardContent>
+                                                <Typography gutterBottom variant="h5" component="div">
+                                                    {item.name}
+                                                </Typography>
+                                                <Typography variant="body2" color="text.secondary">
+                                                    {item.description}
+                                                </Typography>
+                                            </CardContent>
+                                            <CardActions>
+                                                <IconButton color="primary" aria-label="add to shopping cart" onClick={this.addToCart.bind(this, item.id)}>
+                                                    <ShoppingCartIcon/>
+                                                </IconButton>
+                                            </CardActions>
+                                        </Card>
+                                    </Grid>
+                                )
+                            }
+                        </Grid>
+                    </div>
+                </Box>
             </div>
         )
     }
