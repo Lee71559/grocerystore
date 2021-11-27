@@ -1,34 +1,32 @@
 import logo from './logo.svg';
 import './App.css';
-import React, { Component } from "react";
+import {BrowserRouter as Router, Route, Routes, Link} from "react-router-dom";
 
-class App extends Component {
-  state = {
-    items: []
-  };
+import HeaderComponent from './components/HeaderComponent';
+import HomeComponent from './components/HomeComponent';
+import FooterComponent from './components/FooterComponent';
+import CheckoutComponent from './components/CheckoutComponent';
+import CatalogComponent from './components/CatalogComponent';
 
-  async componentDidMount() {
-    const response = await fetch('/items');
-    const body = await response.json();
-    this.setState({items: body});
-  }
+function App() {
+  return (
+   <div>
+     <Router>
+       <HeaderComponent/>
+     <div>
+     <Routes>
+       <Route path = "/" element={<HomeComponent/>}/>
+       <Route path = "/checkout" element={<CheckoutComponent/>}/>
+       <Route path = "/catalog" element={<CatalogComponent/>}/>
+     </Routes>
+     </div>
+     <FooterComponent />
+     </Router>
 
-  render() {
-    const {items} = this.state;
-    return (
-        <div className="App">
-          <header className="App-header">
-            <div className="App-intro">
-              <h2>items</h2>
-              {items.map(item =>
-                  <div key={item.id}>
-                    {item.name} ({item.price})
-                  </div>
-              )}
-            </div>
-          </header>
-        </div>
-    );
-  }
+   </div>
+   
+
+  );
 }
+
 export default App;

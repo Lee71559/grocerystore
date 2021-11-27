@@ -16,6 +16,11 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
 import org.springframework.hateoas.IanaLinkRelations;
@@ -38,7 +43,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import lombok.extern.slf4j.Slf4j;
+import lombok.Getter;
+import lombok.Setter;
+
+@CrossOrigin(origins = "http://localhost:3000")
+@Slf4j
 @RestController
+@Controller
+@RequestMapping("/cart")
 class OrderController {
 
   private final OrderRepository orderRepository;
@@ -275,8 +288,8 @@ class OrderController {
     return ans;
   }
 
-  @DeleteMapping("/ordersItem/{id}")
-  public String deleteOrder(@RequestBody Order_item orderItem, @PathVariable Long id) {
+  @PutMapping("/ordersItem/{id}")
+  public String updateOrder(@RequestBody Order_item orderItem, @PathVariable Long id) {
     Order userOrder = new Order();
     List<Order> orders = orderRepository.findAll();
     boolean found = false;
@@ -303,8 +316,8 @@ class OrderController {
     }
     else{
       System.out.println( "Item ordered found in cart" ) ;
-      double newTotal = newOrderItem.getTotal() - (newOrderItem.getTotal() / newOrderItem.getQuantity() * orderItem.getQuantity());
-      newOrderItem.setQuantity(newOrderItem.getQuantity() - orderItem.getQuantity());
+      double newTotal = newOrderItem.getTotal() / newOrderItem.getQuantity() * orderItem.getQuantity();
+      newOrderItem.setQuantity(orderItem.getQuantity());
       newOrderItem.setTotal(newTotal);
       if(newOrderItem.getQuantity() <= 0){
         orderItemRepository.deleteById(newOrderItem.getId());
@@ -312,7 +325,7 @@ class OrderController {
       }
       else{
         orderItemRepository.save(newOrderItem);
-        System.out.println( "Item ordered quantity is subtracted by 1 in user cart" ) ;
+        System.out.println( "Item ordered quantity is updated in user cart" ) ;
       }
     }
 
