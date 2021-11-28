@@ -7,8 +7,10 @@ Second Team Meeting. Assignments reassigned. Task system was designed to map out
 The third meeting updated the team on my progress. Payment service is done. Testing the connection with the react forms. Frontend styling and creation are done.
 ## Entry 4 (11/14/21):
 Meet with the team to discuss the flow of our project. I updated them on the issue by connecting the form with react. Getting a POST http://localhost:8080/checkout/payments 400 error. Postman connection works fine and I am able to display information from SQL on react page.
-## Entry 5 (11/18/21)
-Meet to discuss progress. Discussed that my issue was corrected. I am now able to save to my database and check for authorization using react frontend. Will be implementing a few styling changes and updating errors. Next step will be deploying it onto Google cloud.
+## Entry 5 (11/18/21):
+Meet to discuss progress. Discussed that my issue was corrected. I am now able to dave to my database and check for authorixation using react frontend. 
+Will be implementing a few styling changes and updating errors. Next step will be deploying it on Google Cloud.
+
 ---
 # Getting Started with Create React App
 
