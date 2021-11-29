@@ -40,3 +40,4 @@
 * Veida has resolved her issue with react and is moving on to deployment.
 * Flow Chart Update ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/images2.png)
 * Other Charts ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/images3.png)
+## Journal Entry 6 (11/28/21)
