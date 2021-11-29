@@ -10,6 +10,9 @@ Meet with the team to discuss the flow of our project. I updated them on the iss
 ## Entry 5 (11/18/21):
 Meet to discuss progress. Discussed that my issue was corrected. I am now able to dave to my database and check for authorixation using react frontend. 
 Will be implementing a few styling changes and updating errors. Next step will be deploying it on Google Cloud.
+## Entry 6 (11/28/21):
+Discussed team member progress. All my git push are up to date code. I will attempt to deploy my react to Google Cloud, in preperation for next meeting.
+## Entry 7 (12/2/21):
 
 ---
 # Getting Started with Create React App
