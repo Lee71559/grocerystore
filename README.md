@@ -43,3 +43,4 @@
 ## Journal Entry 6 (11/28/21)
 * Meet to discuss progress. All teammates code was pushed to git. Xuefeng will be working on SQL database, RabbitMQ, and Kong API.
 * Next meeting we will deploy on Google Cloud.
+## Journal Entry 6 (12/2/21)
