@@ -40,3 +40,7 @@
 * Veida has resolved her issue with react and is moving on to deployment.
 * Flow Chart Update ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/images2.png)
 * Other Charts ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/images3.png)
+## Journal Entry 6 (11/28/21)
+* Meet to discuss progress. All teammates code was pushed to git. Xuefeng will be working on SQL database, RabbitMQ, and Kong API.
+* Next meeting we will deploy on Google Cloud.
+## Journal Entry 6 (12/2/21)
