@@ -28,6 +28,10 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.HttpStatusCodeException;
 import org.springframework.web.server.ResponseStatusException;
 
+import org.springframework.web.bind.annotation.CrossOrigin;
+
+
+@CrossOrigin(origins ="http://localhost:3000")//added to fix CORS Error
 @RestController
 public class CustomerController {
     private  CustomerRepository repository;
