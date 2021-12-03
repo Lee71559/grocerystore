@@ -53,10 +53,9 @@ class CheckoutComponent extends PureComponent {
         }
 
         CartService.updateCart(userId, command).then((res) => {
-            window.alert(res.data);
+            if(!alert(res.data)){window.location.reload();}
         });
 
-        window.location.reload(false);
     }
 
     render() {
