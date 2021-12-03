@@ -86,113 +86,56 @@ public class CustomerController {
 
 
     /*Get details of a Customer*/
-    @GetMapping("/customer/{name}")
-    Customer getOne(@PathVariable String name, HttpServletResponse response) {
-        Customer customer = repository.findByName(name);
-        if(customer == null)
+    @GetMapping("/customer")
+    Customer getOne(@RequestBody Customer customer, HttpServletResponse response) {
+        Customer name = repository.findByName(customer.getName());
+        if(name == null)
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Error. Customer Not Found!");
-        return customer;
+        return name;
     }
 
     /*Authenticate a Customer*/
-    @PostMapping("customer/authenticate/{name}/{password}")
-    Customer activate(@PathVariable String name, @PathVariable String password, HttpServletResponse response){
-        Customer customer = repository.findByName(name);
-        if(customer == null)
+    @PostMapping("customer/authenticate")
+    Long activate(@RequestBody Customer customer, HttpServletResponse response){
+
+        Customer name = repository.findByName(customer.getName());
+
+        if(name == null)
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Error. Customer Not Found!" );
 
-        if(customer.isAuthenticated())
-        throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Error. Customer is Already logged in!" );            
-            
-        String text = customer.getName() + "/" + password;
-        String hashString = hmac_sha256(key, text);
-            
-        if(customer.getPassword().equals(hashString) ){
-            customer.setAuthenticated(true);
-            repository.save(customer);
-        } else { 
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Error. Password Not Valid!" );
+        if(name!=null) {
+
+            if(name.isAuthenticated())
+                throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Error. Customer is Already logged in!" ); 
+
+           
+
+            String text = customer.getName() + "/" + customer.getPassword();
+            String hashString = hmac_sha256(key, text);
+            System.out.println(hashString);    
+            if(name.getPassword().equals(hashString) ){
+                name.setAuthenticated(true);
+                repository.save(name);
+            } else { 
+                throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Error. Password Not Valid!" );
+            }
+
         }
-        return customer;
+        return name.getId();
+
     }
 
     /*Logout a Customer*/
-    @PostMapping("customer/logout/{name}")
-    Customer logout(@PathVariable String name, HttpServletResponse response){
-        Customer customer = repository.findByName(name);
-        if(customer.isAuthenticated()){
-            customer.setAuthenticated(false);
-            repository.save(customer);//added this code to save change to db
+    @PostMapping("customer/logout")
+    String logout(@RequestBody Customer customer, HttpServletResponse response){
+
+        Customer name = repository.findByName(customer.getName());
+        if(name.isAuthenticated()){
+            name.setAuthenticated(false);
+            repository.save(name);//added this code to save change to db
         } else throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Error. Customer needs to login first!" );
 
-        return customer;
+        return "Logout Successful";
     }
 
 }
-
-
-
-
-    //Customers are stored in memory
-    // private HashMap <String, Customer> customers = new HashMap<>();
-  
-           // customers.put( newcustomer.getName(), newcustomer );
-
-        // Customer customer = customers.get(name);
-        // if(customer == null)
-        //     throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Error. Customer Not Found!");
-        // return String.valueOf(customer.getId());
-
-
-    // /*Get List of Customers*/
-    // @GetMapping("/customers")
-    // List<Customer> all(){
-    //     return repository.findAll();
-    // }
-
-
-
-
-
-
-
-    /*Create a new Starbucks Order*/
-  /*  @PostMapping("/customer/{customername}")
-    @ResponseStatus(HttpStatus.CREATED)
-    Customer newCustomer(@PathVariable String customername, @RequestBody Customer customer) {
-        System.out.println("Register (Customer name = " + customername + ") => " + customer);
-
-        // //check input
-        // if(customer.getName().equals("") || customer.getPassword().equals("")){
-        //     throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Invalid customer creation!");
-        // }
- 
-        //save customer
-        Customer new_customer = repository.save(customer);
-        customers.put(customername, new_customer);
-        return new_customer;
-    }
-
-    /*Get Details of Customer*/
-    /*@GetMapping("customer/{customername}")   
-    Customer getCustomer(@PathVariable String customername, HttpServletResponse response) {
-        Customer active = customers.get(customername);
-        if (active != null){
-            return active;
-        } else {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Customer Not Found!");
-        }
-    }
-*/
-    
-
-
- 
-
- 
-
-
-
-    
-
-
