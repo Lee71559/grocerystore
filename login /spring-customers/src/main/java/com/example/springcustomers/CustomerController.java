@@ -122,6 +122,7 @@ public class CustomerController {
         Customer customer = repository.findByName(name);
         if(customer.isAuthenticated()){
             customer.setAuthenticated(false);
+            repository.save(customer);//added this code to save change to db
         } else throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Error. Customer needs to login first!" );
 
         return customer;
