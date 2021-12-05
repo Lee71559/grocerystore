@@ -2,14 +2,20 @@ import { TextField, Button, Grid, Paper, Avatar, Typography, Link } from "@mater
 import { borderColor } from "@mui/system";
 import { useForm } from "react-hook-form";
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
-
-
+import CustomerService from '../services/CustomerService';
+import { useHistory } from 'react-router-dom';
 
 const SignIn= () => {
     const { register, handleSubmit } = useForm();
+    const history = useHistory();
 
     const onSubmit = (data) => {
-        console.log(data);
+          let customer = {name : data.customername, password: data.customerpassword};
+          CustomerService.authenticateCustomer(customer).then(res => {
+          console.log(res.data);
+          history.push({pathname: "/home",
+        state:{data:customer.name}});
+        });
     };
 
     const paperStyle={padding :50, height:'60vh', width:280, margin:"100px auto"}
@@ -37,11 +43,11 @@ const SignIn= () => {
                 label="Password"
                 type="password"  
                 placeholder="Password"
-                name="password"
+                name="customerpassword"
                 fullWidth required
-                {...register("password")} 
+                {...register("customerpassword")} 
               />
-                            <br/><br/>
+              <br/><br/>
               <Button type = 'submit' variant="contained" color = "primary" style = {btnStyle} fullWidth>Sign in</Button>
                 <Typography> Do you have an account?
                   <Link href="/signup">
