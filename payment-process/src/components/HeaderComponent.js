@@ -125,7 +125,7 @@ class HeaderComponent extends Component {
               <HomeIcon/>
           </Button>
           </Link>
-          <Link to="/"> 
+          <Link to="/signin"> 
           <Button
                 style={Bstyle}
                 onMouseOver={MouseOver}
@@ -134,13 +134,22 @@ class HeaderComponent extends Component {
               Log in
           </Button>
           </Link>
-          <Link to="/"> 
+          <Link to="/signup"> 
           <Button
                 style={Bstyle}
                 onMouseOver={MouseOver}
                 onMouseOut={MouseOut}
               >
               Sign Up
+          </Button>
+          </Link>
+          <Link to="/home"> 
+          <Button
+                style={Bstyle}
+                onMouseOver={MouseOver}
+                onMouseOut={MouseOut}
+              >
+              Log out
           </Button>
           </Link>
          </Toolbar>
