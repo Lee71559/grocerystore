@@ -95,6 +95,7 @@ class HeaderComponent extends Component {
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           
+          <Link to="/catalog">
               <Button
                 style={Bstyle}
                 onMouseOver={MouseOver}
@@ -103,6 +104,7 @@ class HeaderComponent extends Component {
               <MenuIcon/>
 
               </Button>
+              </Link>
             
          <Link to="/checkout">
               <Button onClick={() => window.location.href="/checkout"}
@@ -121,6 +123,24 @@ class HeaderComponent extends Component {
                 onMouseOut={MouseOut}
               >
               <HomeIcon/>
+          </Button>
+          </Link>
+          <Link to="/"> 
+          <Button
+                style={Bstyle}
+                onMouseOver={MouseOver}
+                onMouseOut={MouseOut}
+              >
+              Log in
+          </Button>
+          </Link>
+          <Link to="/"> 
+          <Button
+                style={Bstyle}
+                onMouseOver={MouseOver}
+                onMouseOut={MouseOut}
+              >
+              Sign Up
           </Button>
           </Link>
          </Toolbar>
