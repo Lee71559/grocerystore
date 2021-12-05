@@ -1,0 +1,10 @@
+apiVersion: "extensions/v1beta1"
+kind: "Ingress"
+metadata:
+  name: "catalog-cart-ingress"
+  namespace: "default"
+spec:
+  backend:
+    serviceName: "catalog-cart-service"
+    servicePort: 8080
+
