@@ -8,6 +8,7 @@ import FooterComponent from './components/FooterComponent';
 import CheckoutComponent from './components/CheckoutComponent';
 import ListPaymentsComponent from './components/ListPaymentsComponent';
 import ConfirmationComponent from './components/ConfirmationComponent';
+import CatalogComponent from './components/CatalogComponent';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
        <Route path="/payments" element={<ListPaymentsComponent/>}/>
        <Route path = "/checkout" element={<CheckoutComponent/>}/>
        <Route path="/status" element={<ConfirmationComponent/>}/>
+       <Route path = "/catalog" element={<CatalogComponent/>}/>
      </Routes>
      </div>
      <FooterComponent />
