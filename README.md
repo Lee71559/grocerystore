@@ -43,4 +43,64 @@
 ## Journal Entry 6 (11/28/21)
 * Meet to discuss progress. All teammates code was pushed to git. Xuefeng will be working on SQL database, RabbitMQ, and Kong API.
 * Next meeting we will deploy on Google Cloud.
-## Journal Entry 6 (12/2/21)
+## Journal Entry 6 (12/4/21)
+
+---
+# Project
+> Build a Google Cloud Hosted Enterprise Application for a "Real" or "Fictitious" Corporation to support the Order and Payment Processing for Products or Services.  
+> Your team may select any Company and any Product or Services, but must meet the following functional and technical requirements:
+![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/Homescreen.JPG)
+## Functional Requirements
+
+### Front Office Portal: 
+> A "Front Office" Web Application that allows customers to 
+> * sign-up for accounts 
+> * browse product catalog or offerings
+> * place and pay for orders using credit cards.
+
+### Back Office Portals: 
+> * One or more "Back Office" Web Applications that supports "help desk" functions (your team may chose what functions to implement -- for example, refund/returns, help customers reset password, etc...)
+
+### REST APIs: 
+> Back Office and Front Office Applications should integration with "Backends" using one or more REST APIs.
+
+## Technical Requirements
+> Your team's solution must be implemented in Java Spring and be deployable as Docker Containers on Google Cloud VM's and/or Kubernetes Engine (GKE).  Also, your team > will be assigned a Team Repository in our GitHub Organization.  All team members must be committing work to GitHub, making weekly Individual Status Reports as 
+> (Markdown GitHub Files) along with using GitHub's Team Task Board to track your progress.
+
+## Software Stack & Tools
+> * Must use Spring Framework (Spring MVC, Spring JPA, Etc...)
+>   * For Back Office Portal(s)
+>   * For REST APIs
+>   * For customer facing Front Office Portal, team can chose front end Tech Stack
+>   * For Example:  Node.js + Javascript/React
+   
+## Development Tools
+> * Builds must be done with Gradle 5.6
+> * Version of Java should be JDK 11
+## Database & Middleware Requirements
+> * MySQL Database 8.0
+> * RabbitMQ
+> * Kong API Gateway
+> * Credit Card Payments Support
+>   * Integration with CyberSource Payment Gateway
+---
+## ScreenShots:
+* Front Office Portal (20 points)
+  * New User Sign-Up
+  * Browse Catalog
+  * Order Processing
+    *  ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/Checkoutscreen.JPG)
+  * Payment Processing
+    *  ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/Cybersource.JPG)
+
+* Back Office Portal (20 points)
+  * Help Desk Function
+* REST APIs (20 points)
+* Microservices Design (5 points)
+* Microservices Deployment (5 points)
+* Kong API Gateway (10 points)
+* Integration with CyberSource Payments (20 points)
+* Cloud Deployment on GCP/Kubernetes (20 points)
+* MySQL Database 8.0 (10 points)
+* RabbitMQ (10 points)

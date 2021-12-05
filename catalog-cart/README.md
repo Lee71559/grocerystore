@@ -28,6 +28,10 @@
 * Discussed with XueFeng about the updated table for order so that the issue is solved.
 * Implemented React for frontend and continued working on it to make sure there is no bug.
 
+## Journal 7 (11/28/21)
+* Finalize my catalog and cart part and show my teammates.
+* Discuss about deployment of React and backend to GKE.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
