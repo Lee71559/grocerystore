@@ -233,6 +233,8 @@
    *  ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/pod%20deployment.png)
    *  ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/services%20deployment.png)
 * MySQL Database 8.0 (10 points)
+   * Customers
+   * ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/Screen%20Shot%202021-12-06%20at%209.58.40%20PM.png)
    * Orders
    * ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/Screen%20Shot%202021-12-06%20at%2021.58.52.png) 
    * Payment Process
