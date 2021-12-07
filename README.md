@@ -171,6 +171,7 @@
    *   ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/Cybersource.JPG)
 
 * Cloud Deployment on GCP/Kubernetes (20 points)
+   *  ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/services%20deployment.png) 
 * MySQL Database 8.0 (10 points)
       * Payment Process
       * ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/Payment-process-sql.png) 
