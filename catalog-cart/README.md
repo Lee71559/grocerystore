@@ -75,7 +75,7 @@ Database is updated <br />
 
 3. Deleting Item into shopping cart <br />
 Deleting item from shopping cart <br />
-![deleteItem-1](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/catalog-cart/images/frontend/deleteItem-2.png)
+![deleteItem-1](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/catalog-cart/images/frontend/deleteItem-1.png)
 
 Shopping cart is updated <br />
 ![deleteItem-2](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/catalog-cart/images/frontend/deleteItem-2.png)
