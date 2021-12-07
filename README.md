@@ -8,6 +8,9 @@
 ### Individual Journal:
 * [Veida's Journal](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/payment-process/README.md)
 * [Shan Shan's Journal](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/catalog-cart/README.md)
+* [Roneil's Journal](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/login%20/customers_react/customers-app/README.md)
+* [Xuefeng's Journal](https://github.com/nguyensjsu/cmpe172-xuefengxu-21/tree/main/project)
+
 ## Team Journal:
 ## Journal Entry 1 (10/28/21):
 * Meeting to decide what application to make. 
@@ -90,6 +93,8 @@
 ## ScreenShots:
 * Front Office Portal (20 points)
   * New User Sign-Up
+    *  ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/Signup.png)
+    *  ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/Signin.png)
   * Browse Catalog
   * Order Processing
     *  ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/Checkoutscreen.JPG)
