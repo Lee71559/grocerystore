@@ -183,6 +183,6 @@
    *  ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/pod%20deployment.png)
    *  ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/services%20deployment.png)
 * MySQL Database 8.0 (10 points)
-      * Payment Process
-      * ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/Payment-process-sql.png) 
+          * Payment Process
+          * ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/Payment-process-sql.png) 
 * RabbitMQ (10 points)
