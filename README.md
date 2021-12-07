@@ -105,6 +105,65 @@
 * Back Office Portal (20 points)
   * Help Desk Function
 * REST APIs (20 points)
+   * Process Payment
+   ``` 
+   Get /checkout/payments 
+   {
+   {
+        "id": 1,
+        "firstname": "Mike",
+        "lastname": "Smith",
+        "address": "793 SJSU ST",
+        "city": "San Jose",
+        "state": "CA",
+        "zip": "91111",
+        "phone": "(408)123-1234",
+        "cardnum": "4111-1111-1111-1111",
+        "cardexpmon": "September",
+        "cardexpyear": "2029",
+        "cardcvv": "123",
+        "email": "sm@gmail.com",
+        "notes": "",
+        "orderNumber": "10000000",
+        "transactionAmount": "30.00",
+        "transactionCurrency": "USD",
+        "authId": "6370807041136487904006",
+        "authStatus": "AUTHORIZED",
+        "captureId": "6370807048246462204001",
+        "captureStatus": "PENDING",
+        "error": false,
+        "errorRequired": false,
+        "errorInvalid": false,
+        "errorUSCCT": false,
+        "errorAuthorized": false,
+        "errorCR": false,
+        "errorMsg": null,
+        "errMsg1": null,
+        "errMsg2": null,
+        "errMsg3": null,
+        "errMsg4": null,
+        "errMsg5": null,
+        "errMsg6": null,
+        "errMsg7": null
+    }
+   }
+  Post /checkout/payments
+  {
+        "firstname": "Kevin",
+        "lastname": "HERNANDEZ",
+        "address": "793 LINDA FLORA ST",
+        "city": "SAN JOSE",
+        "state": "CA",
+        "zip": "95127",
+        "phone": "(408) 123-1234",
+        "cardnum": "4111-1111-1111-1111",
+        "cardexpmon": "September",
+        "cardexpyear": "2023",
+        "cardcvv": "123",
+        "email": "HERNANDEZ.VEIDA@GMAIL.COM",
+        "notes": ""
+    }
+   ```  
 * Microservices Design (5 points)
 * Microservices Deployment (5 points)
 * Kong API Gateway (10 points)
@@ -113,4 +172,6 @@
 
 * Cloud Deployment on GCP/Kubernetes (20 points)
 * MySQL Database 8.0 (10 points)
+      * Payment Process
+      * ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/Payment-process-sql.png) 
 * RabbitMQ (10 points)
