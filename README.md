@@ -6,7 +6,7 @@
 > * Roneil Sembrano
 > * Xuefeng Xu
 ### Individual Journal:
-* [Veida's Journal](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/app-cmpe172/README.md)
+* [Veida's Journal](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/payment-process/README.md)
 * [Shan Shan's Journal](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/catalog-cart/README.md)
 ## Team Journal:
 ## Journal Entry 1 (10/28/21):
@@ -44,6 +44,8 @@
 * Meet to discuss progress. All teammates code was pushed to git. Xuefeng will be working on SQL database, RabbitMQ, and Kong API.
 * Next meeting we will deploy on Google Cloud.
 ## Journal Entry 6 (12/4/21)
+* Meet to discuss deployment. Xuefeng wanted everyone to push working code. Veida combined all frontend react into one project. 
+* Xuefeng tested all the backend and attempted to deploy on cloud.
 
 ---
 # Project

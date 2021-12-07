@@ -12,7 +12,22 @@ Meet to discuss progress. Discussed that my issue was corrected. I am now able t
 Will be implementing a few styling changes and updating errors. Next step will be deploying it on Google Cloud.
 ## Entry 6 (11/28/21):
 Discussed team member progress. All my git push are up to date code. I will attempt to deploy my react to Google Cloud, in preperation for next meeting.
-## Entry 7 (12/2/21):
+## Entry 7 (12/4/21):
+* Was able to deploy react to frontend. Was unable to deploy the backend unable to deploy mysql. Getiing connection issues.
+* https://sjsustore.uc.r.appspot.com
+---
+# Process Payments
+## Mysql 
+![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/Payment-process-sql.png)
+## Tested on Postman
+![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/payment-process-get.png)
+![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/payment-procss-post.png)
+## React Frontend
+![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/payment-process-Invalid.png)
+![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/payment-process-processing.png)
+![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/payment-process-orderN.png)
+## Cybersource
+![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/Cybersource.JPG)
 
 ---
 # Getting Started with Create React App

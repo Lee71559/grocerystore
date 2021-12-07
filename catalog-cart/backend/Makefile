@@ -43,7 +43,7 @@ docker-push:
 docker-push-amd64:
 	docker buildx ls
 	docker buildx create --use
-	docker buildx build --platform linux/amd64,linux/arm64 --push -t lee71559/catalog-cart:v1 .
+	docker buildx build --platform linux/amd64,linux/arm64 --push -t lee71559/catalog-cart:v2 .
 
 docker-mysql:
 	docker run --platform linux/x86_64 -d --network grocery --name mysql -td -p 3306:3306 -e MYSQL_ROOT_PASSWORD=cmpe172 mysql:8.0

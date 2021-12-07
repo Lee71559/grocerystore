@@ -32,6 +32,15 @@
 * Finalize my catalog and cart part and show my teammates.
 * Discuss about deployment of React and backend to GKE.
 
+## Journal 8 (12/2/21)
+* Discuss about deployment of MySql, backend, React app to GKE.
+
+## Journal 9 (12/6/21)
+* Finzalize journal.
+
+# Catalog-Cart
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
