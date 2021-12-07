@@ -44,6 +44,8 @@
 * Meet to discuss progress. All teammates code was pushed to git. Xuefeng will be working on SQL database, RabbitMQ, and Kong API.
 * Next meeting we will deploy on Google Cloud.
 ## Journal Entry 6 (12/4/21)
+* Meet to discuss deployment. Xuefeng wanted everyone to push working code. Veida combined all frontend react into one project. 
+* Xuefeng tested all the backend and attempted to deploy on cloud.
 
 ---
 # Project
