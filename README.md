@@ -99,7 +99,7 @@
   * Order Processing
     *  ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/Checkoutscreen.JPG)
   * Payment Processing
-    *  ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/Cybersource.JPG)
+    *  ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/payment-process-processing.png)
 
 * Back Office Portal (20 points)
   * Help Desk Function
