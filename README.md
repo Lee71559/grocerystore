@@ -110,6 +110,11 @@
   * ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/back%20office%20portal%20on%20GKE%202.png)
   * ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/back%20office%20portal%20on%20GKE%203.png)
 * REST APIs (20 points)
+   * Signup/Login
+       *   ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/Screen%20Shot%202021-12-05%20at%204.47.30%20PM.png)
+       *   ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/Screen%20Shot%202021-12-05%20at%204.47.56%20PM.png)
+       *   ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/Screen%20Shot%202021-12-05%20at%204.48.15%20PM.png)
+       *   ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/Screen%20Shot%202021-12-05%20at%204.48.26%20PM.png)
    * Process Payment
    ``` 
    Get /checkout/payments 
