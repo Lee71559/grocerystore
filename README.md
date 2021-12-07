@@ -96,6 +96,7 @@
     *  ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/Signup.png)
     *  ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/Signin.png)
   * Browse Catalog
+    * ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/CatalogScreen.png) 
   * Order Processing
     *  ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/Checkoutscreen.JPG)
   * Payment Processing
