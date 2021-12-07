@@ -39,7 +39,83 @@
 * Finzalize journal.
 
 # Catalog-Cart
+* React App as frontend
+1. Catalog in frontend React app <br />
+![catalog-frontend](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/catalog-cart/images/frontend/catalog-frontend.png)
 
+2. Catalog in database table <br />
+![catalog-backend](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/catalog-cart/images/frontend/catalog-backend.png)
+
+3. Shopping cart in frontend React app <br />
+![cart-frontend](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/catalog-cart/images/frontend/cart-frontend.png)
+
+4. Shopping cart in database table <br />
+![cart-backend](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/catalog-cart/images/frontend/cart-backend.png)
+
+* Functions of the app
+1. Adding Item into shopping cart <br />
+Adding item from catalog <br />
+![addItem-1](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/catalog-cart/images/frontend/addItem-1.png)
+
+Shopping cart is updated <br />
+![addItem-2](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/catalog-cart/images/frontend/addItem-2.png)
+
+Database is updated <br />
+![addItem-3](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/catalog-cart/images/frontend/addItem-3.png)
+
+2. Updating Item into shopping cart <br />
+Updating item from shopping cart by adding or subtracting <br />
+![updateItem-1](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/catalog-cart/images/frontend/updateItem-1.png)
+
+Shopping cart is updated <br />
+![updateItem-2](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/catalog-cart/images/frontend/updateItem-2.png)
+
+Database is updated <br />
+![updateItem-3](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/catalog-cart/images/frontend/updateItem-3.png)
+
+3. Deleting Item into shopping cart <br />
+Deleting item from shopping cart <br />
+![deleteItem-1](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/catalog-cart/images/frontend/deleteItem-2.png)
+
+Shopping cart is updated <br />
+![deleteItem-2](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/catalog-cart/images/frontend/deleteItem-2.png)
+
+Database is updated <br />
+![deleteItem-3](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/catalog-cart/images/frontend/deleteItem-3.png)
+
+* MySql as database 
+1. Schema of database <br />
+Schema for Mysql <br />
+![mysql-schema](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/catalog-cart/images/mysql-schema.png)
+
+* API of springBoot app as backend
+1. Get all items from itme table <br />
+![api-getItem](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/catalog-cart/images/api/api-getItem.png)
+
+2. Get all items ordered by a customer <br />
+![api-getOrderItem](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/catalog-cart/images/api/api-getOrderItem.png)
+
+3. Post an item to database, but this is excluded from frontend app since customers are not allowed to post item <br />
+![api-postItem](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/catalog-cart/images/api/api-postItem.png)
+
+4. Post an item ordered by customer to their cart list <br />
+![api-postOrderItem](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/catalog-cart/images/api/api-postOrderItem.png)
+
+5. Update an item quantity of customer shopping cart <br />
+![api-putOrderitem](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/catalog-cart/images/api/api-putOrderitem.png)
+
+* Google cloud MySql deployment on GKE
+1. A bucket is created for the frontend React app <br />
+![bucket](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/catalog-cart/images/mysql-images/bucket.png)
+
+2. A google cloud MySql instance is created <br />
+![instance](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/catalog-cart/images/mysql-images/instance.png)
+
+3. db-secret is created to connect to backend cluster <br />
+![db-secret](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/catalog-cart/images/mysql-images/db-secret.png)
+
+4. Service accounts are created to link Mysql and backend GKE cluster <br />
+![service-accounts](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/catalog-cart/images/mysql-images/service-accounts.png)
 
 # Getting Started with Create React App
 
