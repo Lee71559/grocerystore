@@ -6,7 +6,7 @@
 > * Roneil Sembrano
 > * Xuefeng Xu
 ### Individual Journal:
-* [Veida's Journal](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/app-cmpe172/README.md)
+* [Veida's Journal](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/payment-process/README.md)
 * [Shan Shan's Journal](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/catalog-cart/README.md)
 ## Team Journal:
 ## Journal Entry 1 (10/28/21):
