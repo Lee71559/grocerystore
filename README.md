@@ -52,6 +52,7 @@
 
 ---
 # Project
+![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/Project%20Page%20on%20Repo.png)
 > Build a Google Cloud Hosted Enterprise Application for a "Real" or "Fictitious" Corporation to support the Order and Payment Processing for Products or Services.  
 > Your team may select any Company and any Product or Services, but must meet the following functional and technical requirements:
 ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/Homescreen.JPG)
@@ -95,6 +96,7 @@
   * New User Sign-Up
     *  ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/Signup.png)
     *  ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/Signin.png)
+    *  ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/Logout.png)
   * Browse Catalog
     * ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/CatalogScreen.png) 
   * Order Processing
@@ -104,6 +106,9 @@
 
 * Back Office Portal (20 points)
   * Help Desk Function
+  * ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/back%20office%20portal%20on%20GKE%201.png)
+  * ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/back%20office%20portal%20on%20GKE%202.png)
+  * ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/back%20office%20portal%20on%20GKE%203.png)
 * REST APIs (20 points)
    * Process Payment
    ``` 
@@ -165,8 +170,11 @@
     }
    ```  
 * Microservices Design (5 points)
+   * Deployment Design 
+   * ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/Deployment%20Sequence%20Design.png) 
 * Microservices Deployment (5 points)
 * Kong API Gateway (10 points)
+   * ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/Kong%20API.png) 
 * Integration with CyberSource Payments (20 points)     
    *   ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/Cybersource.JPG)
 
