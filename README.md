@@ -107,7 +107,9 @@
 * Microservices Design (5 points)
 * Microservices Deployment (5 points)
 * Kong API Gateway (10 points)
-* Integration with CyberSource Payments (20 points)
+* Integration with CyberSource Payments (20 points)     
+   *   ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/Cybersource.JPG)
+
 * Cloud Deployment on GCP/Kubernetes (20 points)
 * MySQL Database 8.0 (10 points)
 * RabbitMQ (10 points)
