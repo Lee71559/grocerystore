@@ -110,6 +110,55 @@
   * ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/back%20office%20portal%20on%20GKE%202.png)
   * ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/back%20office%20portal%20on%20GKE%203.png)
 * REST APIs (20 points)
+   * Customer Signup/Login
+   ```
+   POST /customers
+   
+   {
+    "name": "cam",
+    "password": "password"
+   }
+   
+   POST /customer/authenticate
+   
+   {
+    "name": "cam",
+    "password" : "password"
+   }
+   
+   POST /customer/logout
+   {
+    "name":"cam"
+   }
+   
+   GET /Customers
+   [ 
+    {
+     "id":1,
+     "name":"cam",
+     "password":"UmtrFrpiu/Gi7YFZpquU3dqZvtsiHhQt0Ns4GAxQ9a0=",
+     "authenticated":true
+     },
+     {
+      "id":2,
+      "name":"lisa",
+      "password":"9Rfaqc3PxG3rtbXxCsMco8wdd27y+STuJYMAJzePrgQ=",
+      "authenticated":false
+      },
+     {
+      "id":3,
+      "name":"emily",
+      "password":"lmRPzBdHObUQIXy8GpXZwIxB8ex/+MRtDHMMzJyYJ1E=",
+      "authenticated":true
+      },
+      {
+       "id":4,
+       "name":"jim",
+       "password":"wpfrq7nRNWXQgatIGUcsOqL60AbE+Fw20f+Ra+1CErs=",
+       "authenticated":false
+      }
+     ]
+   ```
    * Process Payment
    ``` 
    Get /checkout/payments 
