@@ -229,6 +229,7 @@
    * ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/Kong%20API.png) 
 * Integration with CyberSource Payments (20 points)     
    *   ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/Cybersource.JPG)
+   *   ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/Screen%20Shot%202021-12-06%20at%2010.11.33%20PM%20(2).png)
 
 * Cloud Deployment on GCP/Kubernetes (20 points)
    *  ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/services%20deployment.png) 
