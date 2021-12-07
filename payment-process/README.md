@@ -21,7 +21,7 @@ Discussed team member progress. All my git push are up to date code. I will atte
 ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/Payment-process-sql.png)
 ## Tested on Postman
 ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/payment-process-get.png)
-![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/Payment-process-post.png) 
+![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/payment-process-post.png) 
 
 ---
 # Getting Started with Create React App
