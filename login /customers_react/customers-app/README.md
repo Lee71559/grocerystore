@@ -21,6 +21,12 @@
   ## 12/2 Journal 6
     *Reviewed code 
     *Stand by for deployment
-   
-
- 
+    
+  *Postman
+  * ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/Screen%20Shot%202021-12-05%20at%204.47.30%20PM.png)
+  * ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/Screen%20Shot%202021-12-05%20at%204.47.56%20PM.png)  
+  * ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/Screen%20Shot%202021-12-05%20at%204.48.15%20PM.png)
+  * ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/Screen%20Shot%202021-12-05%20at%204.48.26%20PM.png)
+  
+  *Github Task Board
+  * ![alt text](https://github.com/nguyensjsu/fa21-172-wing-chun/blob/main/images/Screen%20Shot%202021-12-06%20at%206.30.14%20PM.png)
