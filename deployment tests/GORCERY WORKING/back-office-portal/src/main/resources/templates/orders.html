@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+    <head>
+        <title>Orders Portal</title>
+    </head>
+    <body>
+
+        <h1 >Orders Portal</h1>
+        
+        <form name="form" th:object="${command}" method="post" action="">
+
+        <p>
+            Search by Order Id: <input type="text" id="orderid" placeholder="/all" th:field="*{orderid}"/>
+            <input type="submit" name="action" id="searchOrderById" value="Search For Orders" class="btn">
+        </p>
+
+        <div th:if="${not#lists.isEmpty(messages)}">
+          <div class="messages">
+            <ul th:each="m : ${messages}">
+                <li th:text="${m.msg}" />
+            </ul>    
+          </div>
+        </div>
+
+        </form>
+        
+      
+
+        <form th:action="@{/logout}" method="post">
+            <input type="submit" value="Sign Out"/>
+        </form>
+        
+    </body>
+</html>

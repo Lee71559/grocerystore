@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backofficeportal-deployment
+  labels:
+    app: backofficeportal
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backofficeportal
+  template:
+    metadata:
+      labels:
+        app: backofficeportal
+    spec:
+      containers:
+      - name: backofficeportal
+        image: xuefeng89/back-office-portal:v1   
+        ports:
+        - containerPort: 8080
+        env:
+          - name: MYSQL_HOST
+            valueFrom:
+              secretKeyRef:
+                  name: mysql-host
+                  key: dbhost
+          - name: MYSQL_USER_NAME
+            valueFrom:
+              secretKeyRef:
+                  name: mysql-user-pass
+                  key: username
+          - name: MYSQL_USER_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                  name: mysql-user-pass
+                  key: password
+          
+          

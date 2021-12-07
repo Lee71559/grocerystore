@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+    <head>
+        <title>Customers Portal</title>
+    </head>
+    <body>
+        
+        <h1 >Customers Portal</h1>
+        
+        <form name="form" th:object="${command}" method="post" action="">
+
+        <p>
+            Search by Customer Id: <input type="text" id="customerid" placeholder="/all" th:field="*{customerid}"/>
+            <input type="submit" name="action" id="searchCustomerById" value="Search For Customers" class="btn">
+        </p>
+
+        <div th:if="${not#lists.isEmpty(messages)}">
+          <div class="messages">
+            <ul th:each="m : ${messages}">
+                <li th:text="${m.msg}" />
+            </ul>    
+          </div>
+        </div>
+
+        </form>
+
+
+
+        <form th:action="@{/logout}" method="post">
+            <input type="submit" value="Sign Out"/>
+        </form>
+    </body>
+</html>
